@@ -480,11 +480,38 @@ section {
     margin-bottom: 30px;
   }
 }
+.rating{
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.rating input{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.rating input::before{
+  content: "\f005";
+  position: absolute;
+  font-family: fontAwesome;
+  font-size: 20px;
+  color: rgb(247, 126, 126);
+  transition: 0.5s;
+}
+.rating input:hover ~ input::before,
+.rating input:hover::before,
+.rating input:checked ~ input::before,
+.rating input:checked::before,
 
-.ratings a {
-  display: inline-block;
-  font-size: 13px;
-  color: #ff5353;
+.rating input:hover ~ input::before{
+  color: var(--c);
 }
 
 .action-links {
