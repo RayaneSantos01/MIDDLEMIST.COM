@@ -299,315 +299,81 @@
     }
 }
 
-.banner02 {
-    @extend .banner;
-    background-color: #eae2d8;
 
-    .banner-content {
-        h1 {
-            font-family: $dc;
-            font-weight: $bold;
-            text-transform: uppercase;
-            margin-bottom: 33px;
-        }
-        h4 {
-            font-weight: $light;
-            text-transform: uppercase;
-            margin-bottom: 54px;
-        }
-
-        @include mq(991) {
-            h1 {
-                margin-bottom: 10px;
-            }
-            h4 {
-                margin-bottom: 20px;
-            }
-        }
-    }
-}
-.tagline {
-    color: #565656;
-    display: inline-block;
-    font-weight: $mid;
-    line-height: 0.8;
-    letter-spacing: 2.8px;
-    margin-bottom: 0;
-    text-transform: uppercase;
-}
 
 /******************************* 
- * Featured Product Section
+ * pagina sobre de duda
  */
-.feat-product,
-.popular-products, 
-.trending-products {
-    @include mq(767) {
-        padding-bottom: 20px;
-    }
-}
-
-.product-item {
+ .card {
+    margin: auto;
     position: relative;
-
-    .product-thumb {
-        position: relative;
-        display: block;
-        margin-bottom: 30px;
-    }
-
-    .product-content {
-        text-align: center;
-        .product-name {
-            font-size: 14px;
-            font-weight: $normal;
-            color: #888;
-            text-transform: capitalize;
-            margin-bottom: 0;
-            a {
-                color: #888;
-                &:hover {
-                    color: $pink;
-                }
-            }
-        }
-        .price {
-            color: $black;
-            font-size: 18px;
-            font-weight: $mid;
-            margin-bottom: 0;
-        }
-    }
-
-    &:hover {
-        .action-links {
-            opacity: 1;
-            visibility: visible;
-
-            .icon {
-                &:first-child {
-                    animation: fadeInUp 200ms;
-                }
-                &:nth-child(2) {
-                    animation: fadeInUp 400ms;
-                }
-                &:last-child {
-                    animation: fadeInUp 600ms;
-                }
-            }
-        }
-    }
-
-    @include mq(767) {
-        margin-bottom: 30px;
-    }
-}
-
-.ratings {
-    a {
-        display: inline-block;
-        font-size: 13px;
-        color: $pink;
-    }
-}
-
-.action-links {
+    width: 1000px;
+    height: 500px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card svg {
+    width: 48px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  }
+  
+  .card__content {
     position: absolute;
-    bottom: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: $transition;
+    top: 0;
+    left: 0;
     width: 100%;
-    text-align: center;
-    opacity: 0;
-    visibility: hidden;
-
-    .icon {
-        background-color: $white;
-        border-radius: 50%;
-        line-height: 50px;
-        text-align: center;
-        height: 50px;
-        width: 50px;
-        // opacity: 0;
-        // visibility: hidden;
-
-        &:hover {
-            background-color: $pink;
-            color: $white;
-        }
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        transform: translateY(30px);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card:hover .card__content {
+    transform: rotateX(0deg);
+  }
+  
+  .card__title {
+    margin: auto;
+    font-size: 80px;
+    color: #ff5353;
+    font-weight: 700;
+  }
+  
+  .card:hover svg {
+    scale: 0;
+  }
+  
+  .card__description {
+    margin: 20px 0 0;
+    font-size: 30px;
+    color: #ff5353;
+    line-height: 1.5;
+  }
 /******************************* 
- * Features Section
+ * termino da pagina sobre de duda
  */
-.features {
-    @include mq(767) {
-        padding-bottom: 20px;
-    }
-}
-
-.featureBox {
-    border: 1px solid #ebeef0;
-    position: relative;
-    padding: 25px;
-    text-align: center;
-
-    .feat-icon {
-        max-width: 56px;
-        margin: 0 auto 27px;
-    }
-
-    h5 {
-        font-size: 15px;
-        font-weight: $mid;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-    }
-
-    p {
-        margin-bottom: 0;
-        color: #888;
-        line-height: 18px;
-    }
-
-    @include mq(767) {
-        margin-bottom: 30px;
-    }
-}
 
 
-/******************************* 
- * Blog Section
- */
-.blog {
-    @include mq(767) {
-        padding-bottom: 20px;
-    }
-}
-
-.post-item {
-    img {
-        margin-bottom: 25px;
-    }
-    .date {
-        padding-left: 22px;
-        &:before {
-            @include pseudo($l:0, $t:6px);
-            background-color: $pink;
-            border-radius: 2px;
-            width: 12px;
-            height: 6px;
-        }
-    }
-
-    .post-title {
-        font-size: 20px;
-        line-height: 30px;
-        margin-bottom: 0;
-        border-bottom: 1px solid #e1e1e1;
-        padding-bottom: 20px;
-        margin-bottom: 20px;
-        a {
-            color: $black;
-            display: block;
-            &:hover {
-                color: $pink;
-            }
-        }
-    }
-
-    @include mq(767) {
-        margin-bottom: 30px;
-    }
-}
-.meta-tags {
-    a {
-        &:first-child {
-            margin-right: 25px;
-        }
-    }
-}
-.post-meta {
-    position: relative;
-    color: #888;
-    display: inline-block;
-    font-size: 14px;
-    line-height: 18px;
-
-    i {
-        vertical-align: middle;
-        margin-right: 10px;
-    }
-    
-    &:hover {
-        color: $pink;
-    }
-}
-.date {
-    font-size: 13px;
-}
-
-/******************************* 
- * Instagram Section
- */
-.instagram {
-
-    a {
-        position: relative;
-        display: block;
-        overflow: hidden;
-        i {
-            color: $white;
-            font-size: 30px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            transition: $transition;
-            opacity: 0;
-            visibility: hidden;
-        }
-        &:before {
-            @include pseudo($t:30px);
-            background-color: rgba($pink, .7);
-            height: 100%;
-            width: 100%;
-            transition: $transition;
-            opacity: 0;
-            visibility: hidden
-        }
-
-        &:hover {
-            i {
-                opacity: 1;
-                visibility: visible
-            }
-            &::before {
-                top: 0;
-                opacity: 1;
-                visibility: visible
-            }
-        }
-
-        @include mq(767) {
-            margin-bottom: 30px;
-        }
-    }
-}
 
 
-// Widget 
+ // Widget 
 .widget {
     position: relative;
 
@@ -737,5 +503,3 @@
         }
     }
 }
-
-
