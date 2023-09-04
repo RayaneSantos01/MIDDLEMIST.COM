@@ -366,3 +366,83 @@
 /******************************* 
  * termino da pagina sobre de duda
  */
+.footer {
+    background-color: #e9e2d8;
+
+    .widget {
+        .widget-title {
+            margin-bottom: 25px;
+        }
+        @include mq(767) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .copyright {
+        padding: 20px 0;
+        text-align: center;
+        color: #888;
+        margin-bottom: 0;
+        a {color: $pink;}
+    }
+}
+.foo-top {
+    padding: 80px 15px;
+    border-bottom: 1px solid #d6d8d9;
+
+    @include mq(767) {
+        padding-bottom: 20px;
+    }
+}
+
+.app-btn {
+    @include flexbox($a:center);
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d6d8d9;
+    padding-bottom: 30px;
+
+    a {
+        flex-basis: 49%;
+        padding: 12px 10px;
+        border-radius: 5px;
+        background-color: $white;
+        position: relative;
+        padding-left: 35px;
+
+        i {
+            color: #ff5353;
+            font-size: 20px;
+            margin-right: 5px;
+            position: absolute;
+            left: 7px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        p {
+            margin-bottom: 0;
+            color: $black;
+            font-size: 13px;
+            font-weight: $mid;
+            line-height: .8;
+            text-transform: uppercase;
+            span {
+                display: block;
+                font-size: 10px;      
+                font-weight: $normal;          
+                color: #4a4a4a;
+                line-height: .8;
+                margin-bottom: 5px;
+            }
+        }
+
+        &:hover, &.app-store {
+            background-color: $pink;
+           
+            p, span, i{
+                color: $white;
+            } 
+
+        }
+    }
+}
