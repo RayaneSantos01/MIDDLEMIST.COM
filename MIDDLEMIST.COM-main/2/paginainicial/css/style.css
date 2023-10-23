@@ -410,7 +410,12 @@ section {
 /******************************* 
  * duda sobre
  */
- 
+.card-body {
+  color: #ff5353;
+} 
+.card-text {
+  font-size: 20px;
+} 
 /******************************* 
 * duda sobre fim
 */
