@@ -410,12 +410,21 @@ section {
 /******************************* 
  * duda sobre
  */
+ .card-title {
+  font-size: 35px;
+  color: #ff5353;
+ }
 .card-body {
   color: #ff5353;
 } 
 .card-text {
   font-size: 20px;
 } 
+
+#img_sobre {
+  width: 150px;
+  height: 80px;
+}
 /******************************* 
 * duda sobre fim
 */
